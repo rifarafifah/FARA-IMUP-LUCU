@@ -1,0 +1,318 @@
+
+<html>
+
+<head>
+
+<title>Selamat Sempro Fara!</title>
+
+<style>
+
+@keyframes melayang {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.emoji-bg {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: melayang 4s ease-in-out infinite;
+}
+
+body{
+    background: linear-gradient(to bottom, #ffd6ec, #e5d4ff);
+    font-family: Arial;
+    text-align: center;
+    color: #5b2b50;
+    overflow-x: hidden;
+}
+
+button{
+    margin: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff8fc7;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ff62ad;
+}
+
+.halaman{
+    display: none;
+    margin-top: 100px;
+}
+
+#halaman0{
+    display: block;
+}
+
+img{
+    width: 300px;
+    border-radius: 20px;
+}
+
+@keyframes bungaTurun {
+    0% {
+        top: -50px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: rotate(360deg);
+    }
+}
+
+.bunga{
+    position: fixed;
+    top: -50px;
+    z-index: 10;
+    pointer-events: none;
+    animation: bungaTurun linear forwards;
+}
+
+#noteSiap{
+    font-size: 20px;
+    font-weight: bold;
+    color: #d84f91;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<audio id="musik">
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+
+<div class="emoji-bg" style="top:10%; left:10%; font-size:35px;">✨</div>
+
+<div class="emoji-bg" style="top:20%; left:80%; font-size:30px; animation-duration:5s;">🌸</div>
+
+<div class="emoji-bg" style="top:40%; left:15%; font-size:32px; animation-duration:3.5s;">💗</div>
+
+<div class="emoji-bg" style="top:60%; left:85%; font-size:38px; animation-duration:4.5s;">🎀</div>
+
+<div class="emoji-bg" style="top:75%; left:20%; font-size:28px; animation-duration:5.5s;">⭐</div>
+
+<div class="emoji-bg" style="top:80%; left:70%; font-size:34px; animation-duration:3.8s;">✨</div>
+
+<div class="emoji-bg" style="top:30%; left:55%; font-size:24px; animation-duration:4.8s;">🌷</div>
+
+<div class="emoji-bg" style="top:55%; left:45%; font-size:30px; animation-duration:5.2s;">💖</div>
+
+
+<div id="halaman0" class="halaman">
+
+<h1>SIAP??? 👀</h1>
+
+<p>Sudah siap melihat sesuatu yang sangat penting?</p>
+
+<button onclick="mulaiWeb()">YAAA</button>
+
+<button onclick="belumSiap()">TIDAK</button>
+
+<p id="noteSiap"></p>
+
+</div>
+
+
+<div id="halaman1" class="halaman">
+
+<h1>Siapakah wanita cantik, lucu dan imup yang sudah sempro iniii?</h1>
+
+<button onclick="halaman2()">FARAAA</button>
+
+<button onclick="halaman2()">FARAAA SYANTIIIKK</button>
+
+<button onclick="halaman2()">FARA LUUSYUU</button>
+
+<button onclick="halaman2()">FARA KECEEE</button>
+
+</div>
+
+
+<div id="halaman2" class="halaman">
+
+<h1>YAKIN NIH???</h1>
+
+<p>Siapa yang berhasil melewati sempro dengan kece?</p>
+
+<button onclick="halaman3()">Fara dong</button>
+
+<button onclick="halaman3()">FARA IMUP</button>
+
+<button onclick="halaman3()">Faraaaaa</button>
+
+<button onclick="halaman3()">Ya Fara lah siapa lagii</button>
+
+</div>
+
+
+<div id="halaman3" class="halaman">
+
+<h1>Pertanyaan terakhir...</h1>
+
+<p>SIAPAA YANG HARUSS DAPET UCAPAN DENGAN HEBOHH HARI INIII?!</p>
+
+<button onclick="halaman4()">FARAAA IMUPP</button>
+
+<button onclick="halaman4()">FARAA CANTIKK</button>
+
+<button onclick="halaman4()">FARAA KERENN</button>
+
+<button onclick="halaman4()">SEMUA BETUL SII</button>
+
+</div>
+
+
+<div id="halaman4" class="halaman">
+
+<h1>SELAMAT SEMPRO FARA!!! 🎉💗</h1>
+
+<img src="fara.jpg">
+
+<h2>Congratulations!</h2>
+
+<p>
+Selamat yaa Fara udah berhasil melewati sempro! 🥹💗
+</p>
+
+<p>
+Semoga semua perjuangan, revisi, begadang, panik, dan dramanya
+terbayar dengan hasil yang terbaaaaaaaaaaik.
+</p>
+
+<p>
+Semangat lanjut ke tahap berikutnya!
+Semoga lancar sampai sidang dan wisuda. 🎓✨
+</p>
+
+<h2>PROUD OF YOUUU 💕</h2>
+
+</div>
+
+
+<script>
+
+function mulaiWeb(){
+
+    let musik = document.getElementById("musik");
+
+    musik.currentTime = 50;
+
+    musik.play();
+
+    document.getElementById("halaman0").style.display="none";
+
+    document.getElementById("halaman1").style.display="block";
+
+}
+
+
+function belumSiap(){
+
+    document.getElementById("noteSiap").innerHTML =
+    "HARUS SIAP DONGGG 😤💗";
+
+}
+
+
+function halaman2(){
+
+    document.getElementById("halaman1").style.display="none";
+
+    document.getElementById("halaman2").style.display="block";
+
+}
+
+
+function halaman3(){
+
+    document.getElementById("halaman2").style.display="none";
+
+    document.getElementById("halaman3").style.display="block";
+
+}
+
+
+function halaman4(){
+
+    document.getElementById("halaman3").style.display="none";
+
+    document.getElementById("halaman4").style.display="block";
+
+    mulaiBunga();
+
+}
+
+
+function mulaiBunga(){
+
+    for(let i = 0; i < 50; i++){
+
+        setTimeout(function(){
+
+            let bunga = document.createElement("div");
+
+            bunga.className = "bunga";
+
+            let pilihanBunga = [
+                "🌸",
+                "🌷",
+                "🌹",
+                "🌺",
+                "🌼",
+                "💐"
+            ];
+
+            bunga.innerHTML =
+            pilihanBunga[Math.floor(Math.random() * pilihanBunga.length)];
+
+            bunga.style.left =
+            Math.random() * 100 + "%";
+
+            bunga.style.fontSize =
+            (20 + Math.random() * 25) + "px";
+
+            bunga.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+            document.body.appendChild(bunga);
+
+            setTimeout(function(){
+
+                bunga.remove();
+
+            },7000);
+
+        }, i * 150);
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
